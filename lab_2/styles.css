@@ -1,5 +1,26 @@
-.education-section {
+a {
+    color: blue;
+}
+
+.body-container {
+    padding: 0 20% 0 20%;
+}
+
+.content-text {
+    text-align: justify;
+}
+
+.col-6 {
+    float: left;
+    width: 50%;
+}
+
+.education-text {
     text-align: end;
+}
+
+.footer-content {
+    padding-bottom: 20px;
 }
 
 .header-section {
@@ -7,5 +28,15 @@
 }
 
 .name-text {
-    color: blue;
+    margin-bottom: 5px;
+}
+
+.row {
+    display: flex;
+}
+
+.tec-img {
+    width: 350px;
+    height: auto;
+    float: right;
 }
