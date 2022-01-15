@@ -12,3 +12,113 @@ body {
   width: 50px;
 }
 
+.menu > li {
+  display: inline;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  align-self: center;
+}
+
+.navbar {
+  background-color: gray;
+  padding-bottom: 2px;
+}
+
+.hamburger {
+  height: 0;
+  visibility: hidden;
+}
+
+.menu {
+  text-align: right;
+  color: white;
+}
+
+.menu > li {
+  padding-right: 5%;
+}
+
+.product {
+  width: 25%;
+  display: table-cell;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+main {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 30px;
+}
+
+.product > h2, i {
+  text-align: center;
+}
+
+.product > i {
+  position: relative;
+  top: 50%;
+  left: calc(50% - 50px);
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    visibility: hidden;
+  }
+
+  .hamburger {
+    visibility: visible;
+    float: inline-end;
+    color: white;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+
+  .main {
+      display: inline-block;
+      flex-wrap: wrap;
+  }
+
+  .product {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: inline-block;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .logo, .comp-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+  } 
+
+  main {
+    border-spacing: 0;
+  }
+
+  .product {
+    border-radius: 0;
+  }
+}
