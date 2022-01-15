@@ -83,7 +83,7 @@ main {
 
   .hamburger {
     visibility: visible;
-    float: inline-end;
+    float: right;
     color: white;
     padding-right: 5px;
     padding-top: 5px;
@@ -120,5 +120,6 @@ main {
 
   .product {
     border-radius: 0;
+    border-width: 2px;
   }
 }
