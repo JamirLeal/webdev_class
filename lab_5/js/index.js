@@ -12,23 +12,33 @@ $(document).ready(function() {
         if ($(".newTodo").val() !== "") {
             if (!isRepeated($(".newTodo").val())) {
                 texto = $(".newTodo").val();
-                var newElement = `<div class="todoItemBox"><input type = "checkbox" name="todo" class="todoItem"/><p class="todoItemText">${texto}</p></div><br>`
+                var newElement = 
+                `<div class="todoItemBox">
+                    <input type = "checkbox" name="todo" class="todoItem"/><p class="todoItemText">${texto}</p>
+                </div><br>`
                 $(".listOfTodos").append(newElement);
             } else {
-                alert("You are trying to insert a repeated elmenet, ARE U CRAzy¿¿")
+                alert("Error, you have already written this todo in the list.")
             }
             $(".newTodo").val('');
         }
     })
 
-    $("ul").on("click", ".checar", function(event) {
+    $(".markAllButton").on("click", function(event) {
         event.preventDefault();
-        ($(this).parent().hasClass("chec")?
-        $(this).parent().removeClass("chec") : $(this).parent().addClass("chec"));
+        $(".todoItem").prop("checked", true);
+    })
+
+    $(".clearButton").on("click", function(event) {
+        event.preventDefault();
+        $(".todoItem").prop("checked", false);
     })  
 
-    $("ul").on("click", ".del", function(event) {
+    $(".deleteButton").on("click", function(event) {
         event.preventDefault();
-        $(this).parent().parent().remove();
+        result = window.confirm("Are you sure you want to erase the todo list?");
+        if (result) {
+            $(".listOfTodos").children().remove();
+        }
     })
 })

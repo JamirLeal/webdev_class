@@ -51,6 +51,13 @@ fieldset{
 
 .todoItemBox {
   display: flex;
+  border: 2px solid rgb(226, 225, 225);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.todoItemText {
+  padding-left: 20px;
 }
 
 .submitButton{
