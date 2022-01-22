@@ -49,6 +49,10 @@ fieldset{
     width: 200px;
 }
 
+.todoItemBox {
+  display: flex;
+}
+
 .submitButton{
   color: #e7e7e7;
 }
