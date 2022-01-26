@@ -37,11 +37,11 @@ function getGif(searchTerm) {
         console.log(response.data)
         $("#superheroes").children().remove();
         response.data.forEach(element => {
-            $("#superheroes").append(`<img class ="super-image" 
-                src="${element.images.fixed_height_still.url}" 
-                data-still="${element.images.fixed_height_still.url}"
-                data-status="stop" 
-                data-play="${element.images.fixed_height.url}">`);
+            $("#superheroes").append(`<div><p>${element.rating}</p><img class ="super-image" 
+            src="${element.images.fixed_height_still.url}" 
+            data-still="${element.images.fixed_height_still.url}"
+            data-status="stop" 
+            data-play="${element.images.fixed_height.url}"></div>`);
             console.log(element.images.fixed_height.url)
         })
     }, error: function(e) {
