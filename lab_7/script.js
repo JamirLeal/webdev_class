@@ -21,7 +21,7 @@ $(document).ready(function() {
             $(this).attr("src", url)
             $(this).attr("data-status", "play")
         } else {
-            const url = $(this).attr("data-stop")
+            const url = $(this).attr("data-still")
             $(this).attr("src", url)
             $(this).attr("data-status", "stop")
         }
